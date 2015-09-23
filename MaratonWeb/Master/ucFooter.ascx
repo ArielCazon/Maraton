@@ -5,4 +5,4 @@
 <p>
     Tecnicatura en Desarrollo Web - Programaci&oacute;n Web III</p>
 <p>
-    Integrantes: Caz&oacute;n Ariel </p>
+    Integrantes: Caz&oacute;n , Ariel - Canosa , Ezequiel - Rocha , Leandro - Yucra Mita, Rodrigo </p>
