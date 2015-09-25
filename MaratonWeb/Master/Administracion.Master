@@ -1,29 +1,40 @@
 ﻿<%@ Master Language="C#" AutoEventWireup="true" CodeBehind="Administracion.master.cs" Inherits="MaratonWeb.Master.Administracion" %>
-
 <%@ Register Src="~/Master/ucFooter.ascx" TagPrefix="uc1" TagName="ucFooter" %>
 
-<uc1:ucFooter runat="server" ID="ucFooter" />
 <!DOCTYPE html>
-
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head runat="server">
     <link href="../css/bootstrap.min.css" rel="stylesheet">
     <link href="../css/Maraton.css" rel="stylesheet" />
     <script src="../js/jquery-1.9.1.min.js"></script>
     <script src="../js/bootstrap.min.js"></script>
-    <title></title>
-    <asp:ContentPlaceHolder ID="head" runat="server">
-    </asp:ContentPlaceHolder>
+    <title>Administracion</title>
 </head>
 <body>
-    <form id="form1" runat="server">
-        <div>
+    <div>
+        <div id="menu">
+            <nav class="navbar">
+                <div class="container-fluid">
+                    <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+                        <ul class="nav navbar-nav">
+                            <li><a href="#">Login Administrador</a></li>
+                            <li><a href="#">Crear Maraton</a></li>
+                            <li><a href="#">Resultados</a></li>
+                        </ul>
+                    </div>
+                </div>
+            </nav>
+        </div>
+        <div class="main">
             <asp:ContentPlaceHolder ID="ContentPlaceHolder1" runat="server">
             </asp:ContentPlaceHolder>
         </div>
-    </form>
-    <div id="divFooterAdmin">
-        <uc1:ucFooter  ID="ucFooterAdmin" runat="server"/>
+
+    </div>
+<%--    <div class="clear">
+    </div>--%>
+    <div id="footerAdmin">
+        <uc1:ucFooter ID="ucFooterAdmin" runat="server" />
     </div>
 </body>
 </html>
