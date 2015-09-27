@@ -40,6 +40,15 @@ namespace MaratonWeb {
         protected global::System.Web.UI.WebControls.TextBox txtNombre;
         
         /// <summary>
+        /// RequiredFieldValidatorNombre control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.RequiredFieldValidator RequiredFieldValidatorNombre;
+        
+        /// <summary>
         /// lblMaximoParticipantes control.
         /// </summary>
         /// <remarks>
@@ -58,6 +67,24 @@ namespace MaratonWeb {
         protected global::System.Web.UI.WebControls.TextBox txtMaximoParticipantes;
         
         /// <summary>
+        /// RequiredFieldValidatorCantMax control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.RequiredFieldValidator RequiredFieldValidatorCantMax;
+        
+        /// <summary>
+        /// RangeValidatorCantMax control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.RangeValidator RangeValidatorCantMax;
+        
+        /// <summary>
         /// lblLugarSalida control.
         /// </summary>
         /// <remarks>
@@ -74,6 +101,15 @@ namespace MaratonWeb {
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::System.Web.UI.WebControls.TextBox txtLugarSalida;
+        
+        /// <summary>
+        /// RequiredFieldValidatorLugar control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.RequiredFieldValidator RequiredFieldValidatorLugar;
         
         /// <summary>
         /// lblListaEspera control.

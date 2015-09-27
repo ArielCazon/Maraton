@@ -3,9 +3,11 @@
 <%@ Register Src="~/Master/ucFooter.ascx" TagPrefix="uc1" TagName="ucFooter" %>
 
 <!DOCTYPE html>
-<html xmlns="http://www.w3.org/1999/xhtml">
-<head runat="server">
-    <link href="../css/bootstrap.min.css" rel="stylesheet">
+<html>
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no" />
+    <link href="../css/bootstrap.min.css" rel="stylesheet"/>
     <link href="../css/Maraton.css" rel="stylesheet" />
     <script src="../js/jquery-1.9.1.min.js"></script>
     <script src="../js/bootstrap.min.js"></script>
@@ -28,15 +30,17 @@
                 </nav>
             </div>
             <br class="clearfix" />
-            <div class="container">
-                <asp:ContentPlaceHolder ID="ContentPlaceHolder1" runat="server">
-                </asp:ContentPlaceHolder>
+            <div class="row">
+                <div class="container">
+                    <asp:ContentPlaceHolder ID="ContentPlaceHolder1" runat="server">
+                    </asp:ContentPlaceHolder>
+                </div>
             </div>
         </div>
     </div>
     <br class="clearfix" />
     <div id="footerAdmins" class="row">
-        <div class= "text-center">
+        <div class="text-center">
             <uc1:ucFooter ID="ucFooterAdmin" runat="server" />
         </div>
     </div>
