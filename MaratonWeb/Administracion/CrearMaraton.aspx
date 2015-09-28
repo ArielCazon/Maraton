@@ -4,6 +4,7 @@
     <div class="center-block">
         <div class="col-xs-2"></div>
         <div class="col-xs-8">
+             <div class="jumbotron">
             <form class="form-horizontal" id="NewMaraton" runat="server">
                 <fieldset>
                     <legend>Crear Maraton</legend>
@@ -100,6 +101,7 @@
                     </div>
                 </fieldset>
             </form>
+                 </div><!-- find jumbotron -->
         </div>
         <div class="col-xs-2"></div>
     </div>
