@@ -58,6 +58,8 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="Administracion\CrearMaraton.aspx" />
+    <Content Include="Administracion\CrearResultado.aspx" />
+    <Content Include="Administracion\Login.aspx" />
     <Content Include="css\bootstrap-theme.css" />
     <Content Include="css\bootstrap-theme.min.css" />
     <Content Include="css\bootstrap.css" />
@@ -82,6 +84,20 @@
     </Compile>
     <Compile Include="Administracion\CrearMaraton.aspx.designer.cs">
       <DependentUpon>CrearMaraton.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Administracion\CrearResultado.aspx.cs">
+      <DependentUpon>CrearResultado.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Administracion\CrearResultado.aspx.designer.cs">
+      <DependentUpon>CrearResultado.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Administracion\Login.aspx.cs">
+      <DependentUpon>Login.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Administracion\Login.aspx.designer.cs">
+      <DependentUpon>Login.aspx</DependentUpon>
     </Compile>
     <Compile Include="Inicio.aspx.cs">
       <DependentUpon>Inicio.aspx</DependentUpon>

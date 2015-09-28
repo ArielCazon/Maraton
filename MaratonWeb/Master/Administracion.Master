@@ -9,40 +9,68 @@
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no" />
     <link href="../css/bootstrap.min.css" rel="stylesheet"/>
     <link href="../css/Maraton.css" rel="stylesheet" />
+   
     <script src="../js/jquery-1.9.1.min.js"></script>
     <script src="../js/bootstrap.min.js"></script>
     <title>Administracion</title>
 </head>
 <body>
     <div class="container">
-        <div>
-            <div id="menu" class="row">
-                <nav class="navbar">
-                    <div class="container text-center">
-                        <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
-                            <ul class="nav navbar-nav">
-                                <li><a href="#" class="btn btn-default">Login Administrador</a></li>
-                                <li><a href="#" class="btn btn-default">Crear Maraton</a></li>
-                                <li><a href="#" class="btn btn-default">Resultados</a></li>
-                            </ul>
-                        </div>
-                    </div>
-                </nav>
-            </div>
+
+        <nav class="navbar navbar-default">
+        <div class="container-fluid">
+          <div class="navbar-header">
+            <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
+              <span class="sr-only">Toggle navigation</span>
+              <span class="icon-bar"></span>
+              <span class="icon-bar"></span>
+              <span class="icon-bar"></span>
+            </button>
+            <a class="navbar-brand" href="#">Administracion</a>
+          </div>
+
+          <div id="navbar" class="navbar-collapse collapse">
+            <ul class="nav navbar-nav">
+              <li class="active"><a href="../Administracion/Login.aspx">Login</a></li>
+              <li><a href="../Administracion/CrearMaraton.aspx">Crear maraton</a></li>
+              <li><a href="../Administracion/CrearResultado.aspx">Resultados</a></li>
+            </ul>
+            <ul class="nav navbar-nav navbar-right">
+              <li class="dropdown">
+                <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Administrador <span class="caret"></span></a>
+                <ul class="dropdown-menu">
+                  <li><a href="#">Action</a></li>
+                  <li role="separator" class="divider"></li>
+                  <li class="dropdown-header">Nav header</li>
+                  <li><a href="#">Separated link</a></li>
+                  <li><a href="#">Salir</a></li>
+                </ul>
+              </li>
+            </ul>
+          </div><!--/.nav-collapse -->
+        </div><!--/.container-fluid -->
+      </nav><!-- find nav-->
+        
+
             <br class="clearfix" />
+
             <div class="row">
                 <div class="container">
                     <asp:ContentPlaceHolder ID="ContentPlaceHolder1" runat="server">
                     </asp:ContentPlaceHolder>
                 </div>
+            </div> <!-- find row-->
+           <br class="clearfix" />
+
+          <div id="footerAdmins" class="row">
+            <div class="text-center row "  id="Div1" >
+                <uc1:ucFooter ID="ucFooterAdmin" runat="server" />
             </div>
-        </div>
-    </div>
-    <br class="clearfix" />
-    <div id="footerAdmins" class="row">
-        <div class="text-center">
-            <uc1:ucFooter ID="ucFooterAdmin" runat="server" />
-        </div>
-    </div>
+         </div> <!-- find row -->
+        
+  </div><!-- find container -->
+       
+    
+   
 </body>
 </html>

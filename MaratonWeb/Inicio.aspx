@@ -18,8 +18,8 @@
             <div class="col-xs-12">
                 <h2>Bienvenido a Maraton</h2>
             </div>
-        </div>
-        <!-- find row -->
+        </div>  <!-- find row -->
+
         <br class="clearfix" />
         <div class="row">
             <div class="col-xs-6">
@@ -31,8 +31,8 @@
             <div class="col-xs-3 ">
                 <asp:HyperLink ID="HyperLink3" runat="server">Registrarse</asp:HyperLink>
             </div>
-        </div>
-        <!-- find row -->
+        </div>        <!-- find row -->
+        
         <br class="clearfix" />
         <div class="row">
             <div class="jumbotron">
@@ -102,19 +102,21 @@
                     </div>
                 </div>
             </div>
-        </div>
+        </div>         <!-- find row -->
+
         <br class="clearfix" />
         <div class="row">
             <div class="col-xs-12">
             </div>
-        </div>
+        </div>         <!-- find row -->
+
         <br class="clearfix" />
         <div class="row">
             <div class="col-xs-12 text-center">
                 <uc1:ucFooter ID="UcFooter1" runat="server" />
             </div>
-        </div>
-    </div>
+        </div>        <!-- find row -->
+    </div>         <!-- find container -->
 </body>
 </html>
 
