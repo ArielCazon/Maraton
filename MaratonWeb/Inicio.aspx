@@ -18,21 +18,23 @@
             <div class="col-xs-12">
                 <h2>Bienvenido a Maraton</h2>
             </div>
-        </div>
-        <!-- find row -->
+        </div>  <!-- find row -->
+
         <br class="clearfix" />
         <div class="row">
             <div class="col-xs-6">
-                <asp:HyperLink ID="HyperLink1" runat="server">Administradores</asp:HyperLink>
+    <a href="Administracion/Login.aspx"  class="btn btn-primary btn-xs" >Administracion</a>
             </div>
             <div class="col-xs-3 text-right">
-                <asp:HyperLink ID="HyperLink2" runat="server">Login Usuarios</asp:HyperLink>
+            <button type="button" class="btn btn-primary btn-xs" data-toggle="modal" data-target="#myModal">
+                    Login Usuario
+                       </button>
             </div>
             <div class="col-xs-3 ">
-                <asp:HyperLink ID="HyperLink3" runat="server">Registrarse</asp:HyperLink>
+              <a href="Administracion/Login.aspx"  class="btn btn-primary btn-xs" >Registrarse</a>
             </div>
-        </div>
-        <!-- find row -->
+        </div>        <!-- find row -->
+        
         <br class="clearfix" />
         <div class="row">
             <div class="jumbotron">
@@ -102,19 +104,78 @@
                     </div>
                 </div>
             </div>
-        </div>
+        </div>         <!-- find row -->
+
         <br class="clearfix" />
         <div class="row">
             <div class="col-xs-12">
             </div>
-        </div>
+        </div>         <!-- find row -->
+
         <br class="clearfix" />
         <div class="row">
             <div class="col-xs-12 text-center">
                 <uc1:ucFooter ID="UcFooter1" runat="server" />
             </div>
+        </div>        <!-- find row -->
+   
+     <div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+      <div class="modal-dialog">
+        <div class="modal-content">
+     <div class="row">
+          <div class="col-lg-12"> 
+            <div class="well bs-component">
+                  <form class="form-horizontal" id="Login" runat="server" action="/Usuario/Historial.aspx">
+                <fieldset>
+                  <legend>Login usuario</legend>
+                  <div class="form-group">
+                      
+                    <label for="inputEmail" ID="lblEmail" runat="server" class="col-lg-2 control-label">Email</label>
+                    <div class="col-lg-10">
+                        <asp:TextBox id="txtEmail" runat="server" CssClass="form-control"></asp:TextBox>
+                        <asp:RequiredFieldValidator
+                            ID="RequiredFieldValidatorEmail"
+                            ControlToValidate="txtEmail"
+                            Display="Static"
+                            ErrorMessage="*"
+                            Text="Este campo es obligatorio!"
+                            runat="server"
+                            ForeColor="Red" />
+                         </div>
+                  </div>
+                  <div class="form-group">
+                    <label for="inputPassword" ID="lblPassword" runat="server"  class="col-lg-2 control-label">Password</label>
+                    <div class="col-lg-10">
+                        <asp:TextBox id="txtPassword" TextMode="password" runat="server"  CssClass="form-control" />
+                        <asp:RequiredFieldValidator
+                            ID="RequiredFieldValidatorPassword"
+                            ControlToValidate="txtPassword"
+                            Display="Static"
+                            ErrorMessage="*"
+                            Text="Este campo es obligatorio!"
+                            runat="server"
+                            ForeColor="Red" />
+                    </div>
+                  </div>
+                
+                  <div class="form-group">
+                    <div class="col-lg-10 col-lg-offset-2">
+                      <button type="submit" class="btn btn-primary" >Ingresar</button>
+                    </div>
+                  </div>
+
+                </fieldset>
+              </form>
+            <div id="source-button" class="btn btn-primary btn-xs" style="display: none;">&lt; &gt;</div>
+           </div>
+          </div>
         </div>
-    </div>
+        </div>    
+        </div>    
+           </div> 
+          </div> 
+
+
 </body>
 </html>
 

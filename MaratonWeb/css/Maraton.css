@@ -13,14 +13,12 @@ height:100%;
 {
 width:100%;
 text-align:center;
-padding:20px;
-border-top:1px solid #ddd;
-color:#CCD3D9;
 font-size:1em;
 bottom:0;
 position: absolute;
 left:0;
-background:#131540;
+background:#2b3e50;
+
 }
 
 #footerAdmin
@@ -36,3 +34,9 @@ position: relative;
 left:0;
 background:#131540;
 }
+
+
+ .banner {
+        background-image: url("/images/Banner.jpg");
+        width:100%;
+        }

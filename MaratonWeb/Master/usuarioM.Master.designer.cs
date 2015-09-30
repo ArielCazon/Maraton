@@ -10,7 +10,16 @@
 namespace MaratonWeb.Master {
     
     
-    public partial class Administracion {
+    public partial class usuarioM {
+        
+        /// <summary>
+        /// Control modal.
+        /// </summary>
+        /// <remarks>
+        /// Campo generado automáticamente.
+        /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.ContentPlaceHolder modal;
         
         /// <summary>
         /// Control ContentPlaceHolder1.
@@ -22,12 +31,12 @@ namespace MaratonWeb.Master {
         protected global::System.Web.UI.WebControls.ContentPlaceHolder ContentPlaceHolder1;
         
         /// <summary>
-        /// Control ucFooterAdmin.
+        /// Control ucFooterUsuario.
         /// </summary>
         /// <remarks>
         /// Campo generado automáticamente.
         /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
         /// </remarks>
-        protected global::MaratonWeb.Master.ucFooter ucFooterAdmin;
+        protected global::MaratonWeb.Master.ucFooter ucFooterUsuario;
     }
 }

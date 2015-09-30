@@ -5,14 +5,13 @@ using System.Web;
 using System.Web.UI;
 using System.Web.UI.WebControls;
 
-namespace MaratonWeb
+namespace MaratonWeb.Master
 {
-    public partial class Inicio : System.Web.UI.Page
+    public partial class usuarioM : System.Web.UI.MasterPage
     {
         protected void Page_Load(object sender, EventArgs e)
         {
 
         }
-
     }
 }

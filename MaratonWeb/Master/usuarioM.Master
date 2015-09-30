@@ -1,4 +1,4 @@
-﻿<%@ Master Language="C#" AutoEventWireup="true" CodeBehind="Administracion.master.cs" Inherits="MaratonWeb.Master.Administracion" %>
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeBehind="usuarioM.master.cs" Inherits="MaratonWeb.Master.usuarioM" %>
 
 <%@ Register Src="~/Master/ucFooter.ascx" TagPrefix="uc1" TagName="ucFooter" %>
 
@@ -12,13 +12,17 @@
    
     <script src="../js/jquery-1.9.1.min.js"></script>
     <script src="../js/bootstrap.min.js"></script>
-    <title>Administracion</title>
+    <title>Usuarios</title>
 </head>
 <body>
-    <div class="container">
-         
+     <div class="container">
         <div class="jumbotron banner">
         </div>
+
+
+       <asp:ContentPlaceHolder ID="modal" runat="server">
+    </asp:ContentPlaceHolder>
+
         <nav class="navbar navbar-default">
         <div class="container-fluid">
           <div class="navbar-header">
@@ -28,18 +32,20 @@
               <span class="icon-bar"></span>
               <span class="icon-bar"></span>
             </button>
-            <a class="navbar-brand" href="../Inicio.aspx">Inicio</a>
+           <a href="../Inicio.aspx" class="navbar-brand">Inicio</a>
           </div>
 
           <div id="navbar" class="navbar-collapse collapse">
             <ul class="nav navbar-nav">
-              <li class="active"><a href="../Administracion/Login.aspx">Login</a></li>
-              <li><a href="../Administracion/CrearMaraton.aspx">Crear maraton</a></li>
-              <li><a href="../Administracion/CrearResultado.aspx">Resultados</a></li>
+              <li><a href="../Usuario/AdmiUsuario.aspx">Administrar usuarios</a></li>
+        
+              <li><a href="../Usuario/Historial.aspx">Historial de Maratones</a></li>
+        
+              <li><a href="../Usuario/registracion.aspx">Registracion a nuevo maraton</a></li>
             </ul>
             <ul class="nav navbar-nav navbar-right">
               <li class="dropdown">
-                <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Administrador <span class="caret"></span></a>
+                <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Usuario<span class="caret"></span></a>
                 <ul class="dropdown-menu">
                   <li><a href="#">Action</a></li>
                   <li role="separator" class="divider"></li>
@@ -64,9 +70,9 @@
             </div> <!-- find row-->
            <br class="clearfix" />
 
-          <div id="footerAdmis" class="row">
+          <div id="footer" class="row">
             <div class="text-center row "  id="Div1" >
-                <uc1:ucFooter ID="ucFooterAdmin" runat="server" />
+                <uc1:ucFooter ID="ucFooterUsuario" runat="server" />
             </div>
          </div> <!-- find row -->
         

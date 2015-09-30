@@ -4,6 +4,7 @@
     <div class="center-block">
         <div class="col-xs-2"></div>
         <div class="col-xs-8">
+             <div class="jumbotron">
             <form class="form-horizontal" id="NewMaraton" runat="server">
                 <fieldset>
                     <legend>Crear Maraton</legend>
@@ -95,11 +96,12 @@
                     </div>
                     <div class="form-group">
                         <div class="text-center">
-                            <button type="submit" class="btn btn-info btn-lg btn-block">Crear Maraton</button>
+                            <button type="submit" class="btn btn-primary btn-lg btn-block">Crear Maraton</button>
                         </div>
                     </div>
                 </fieldset>
             </form>
+                 </div><!-- find jumbotron -->
         </div>
         <div class="col-xs-2"></div>
     </div>
