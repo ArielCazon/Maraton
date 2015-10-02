@@ -79,6 +79,7 @@
     <Content Include="Usuario\AdmiUsuario.aspx" />
     <Content Include="Usuario\Historial.aspx" />
     <Content Include="Usuario\registracion.aspx" />
+    <Content Include="Usuario\RegistrarUsuario.aspx" />
     <Content Include="Web.config" />
   </ItemGroup>
   <ItemGroup>
@@ -152,6 +153,13 @@
     </Compile>
     <Compile Include="Usuario\registracion.aspx.designer.cs">
       <DependentUpon>registracion.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Usuario\RegistrarUsuario.aspx.cs">
+      <DependentUpon>RegistrarUsuario.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Usuario\RegistrarUsuario.aspx.designer.cs">
+      <DependentUpon>RegistrarUsuario.aspx</DependentUpon>
     </Compile>
   </ItemGroup>
   <ItemGroup>

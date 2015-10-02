@@ -18,23 +18,25 @@
             <div class="col-xs-12">
                 <h2>Bienvenido a Maraton</h2>
             </div>
-        </div>  <!-- find row -->
+        </div>
+        <!-- find row -->
 
         <br class="clearfix" />
         <div class="row">
             <div class="col-xs-6">
-    <a href="Administracion/Login.aspx"  class="btn btn-primary btn-xs" >Administracion</a>
+                <a href="Administracion/Login.aspx" class="btn btn-primary btn-xs">Administracion</a>
             </div>
             <div class="col-xs-3 text-right">
-            <button type="button" class="btn btn-primary btn-xs" data-toggle="modal" data-target="#myModal">
+                <button type="button" class="btn btn-primary btn-xs" data-toggle="modal" data-target="#myModal">
                     Login Usuario
-                       </button>
+                </button>
             </div>
             <div class="col-xs-3 ">
-              <a href="Administracion/Login.aspx"  class="btn btn-primary btn-xs" >Registrarse</a>
+                <a href="Usuario/RegistrarUsuario.aspx" class="btn btn-primary btn-xs">Registrarse </a>
             </div>
-        </div>        <!-- find row -->
-        
+        </div>
+        <!-- find row -->
+
         <br class="clearfix" />
         <div class="row">
             <div class="jumbotron">
@@ -104,76 +106,88 @@
                     </div>
                 </div>
             </div>
-        </div>         <!-- find row -->
+        </div>
+        <!-- find row -->
 
         <br class="clearfix" />
         <div class="row">
             <div class="col-xs-12">
             </div>
-        </div>         <!-- find row -->
+        </div>
+        <!-- find row -->
 
         <br class="clearfix" />
         <div class="row">
             <div class="col-xs-12 text-center">
                 <uc1:ucFooter ID="UcFooter1" runat="server" />
             </div>
-        </div>        <!-- find row -->
-   
-     <div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
-      <div class="modal-dialog">
-        <div class="modal-content">
-     <div class="row">
-          <div class="col-lg-12"> 
-            <div class="well bs-component">
-                  <form class="form-horizontal" id="Login" runat="server" action="/Usuario/Historial.aspx">
-                <fieldset>
-                  <legend>Login usuario</legend>
-                  <div class="form-group">
-                      
-                    <label for="inputEmail" ID="lblEmail" runat="server" class="col-lg-2 control-label">Email</label>
-                    <div class="col-lg-10">
-                        <asp:TextBox id="txtEmail" runat="server" CssClass="form-control"></asp:TextBox>
-                        <asp:RequiredFieldValidator
-                            ID="RequiredFieldValidatorEmail"
-                            ControlToValidate="txtEmail"
-                            Display="Static"
-                            ErrorMessage="*"
-                            Text="Este campo es obligatorio!"
-                            runat="server"
-                            ForeColor="Red" />
-                         </div>
-                  </div>
-                  <div class="form-group">
-                    <label for="inputPassword" ID="lblPassword" runat="server"  class="col-lg-2 control-label">Password</label>
-                    <div class="col-lg-10">
-                        <asp:TextBox id="txtPassword" TextMode="password" runat="server"  CssClass="form-control" />
-                        <asp:RequiredFieldValidator
-                            ID="RequiredFieldValidatorPassword"
-                            ControlToValidate="txtPassword"
-                            Display="Static"
-                            ErrorMessage="*"
-                            Text="Este campo es obligatorio!"
-                            runat="server"
-                            ForeColor="Red" />
-                    </div>
-                  </div>
-                
-                  <div class="form-group">
-                    <div class="col-lg-10 col-lg-offset-2">
-                      <button type="submit" class="btn btn-primary" >Ingresar</button>
-                    </div>
-                  </div>
-
-                </fieldset>
-              </form>
-            <div id="source-button" class="btn btn-primary btn-xs" style="display: none;">&lt; &gt;</div>
-           </div>
-          </div>
         </div>
-        </div>    
-        </div>    
-           </div> 
-          </div> 
+        <!-- find row -->
+
+        <div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+            <div class="modal-dialog">
+                <div class="modal-content">
+                    <div class="row">
+                        <div class="col-lg-12">
+                            <div class="well bs-component">
+                                <form class="form-horizontal" id="Login" runat="server" action="/Usuario/Historial.aspx">
+                                    <fieldset>
+                                        <legend>Login usuario</legend>
+                                        <div class="form-group">
+
+                                            <label id="lblEmail" runat="server" class="col-lg-2 control-label">Email</label>
+                                            <div class="col-lg-10">
+                                                <asp:TextBox ID="txtEmail" runat="server" CssClass="form-control"></asp:TextBox>
+                                                <asp:RequiredFieldValidator
+                                                    ID="RequiredFieldValidatorEmail"
+                                                    ControlToValidate="txtEmail"
+                                                    Display="Static"
+                                                    ErrorMessage="*"
+                                                    Text="Este campo es obligatorio!"
+                                                    runat="server"
+                                                    ForeColor="Turquoise" Font-Bold="true" />
+                                                <asp:RegularExpressionValidator
+                                                    ID="RegularExpressionValidator1"
+                                                    runat="server"
+                                                    ControlToValidate="txtEmail"
+                                                    Display="Dynamic"
+                                                    ValidationExpression="\w+([-+.']\w+)*@\w+([-.]\w+)*\.\w+([-.]\w+)*"
+                                                    ForeColor="Turquoise" Font-Bold="true"
+                                                    ErrorMessage="Ingrese un formato de email valido">
+                                                </asp:RegularExpressionValidator>
+                                            </div>
+                                        </div>
+                                        <div class="form-group">
+                                            <label id="lblPassword" runat="server" class="col-lg-2 control-label">Password</label>
+                                            <div class="col-lg-10">
+                                                <asp:TextBox ID="txtPassword" TextMode="password" runat="server" CssClass="form-control" />
+                                                <asp:RequiredFieldValidator
+                                                    ID="RequiredFieldValidatorPassword"
+                                                    ControlToValidate="txtPassword"
+                                                    Display="Static"
+                                                    ErrorMessage="*"
+                                                    Text="Este campo es obligatorio!"
+                                                    runat="server"
+                                                    ForeColor="Turquoise" Font-Bold="true" />
+                                            </div>
+                                        </div>
+
+                                        <div class="form-group">
+                                            <div class="col-lg-10 col-lg-offset-2">
+                                                <asp:Button ID="btnIngresarUsuario" runat="server" Text="Ingresar" class="btn btn-primary" />
+                                            </div>
+                                        </div>
+
+                                    </fieldset>
+                                </form>
+                                <div id="source-button" class="btn btn-primary btn-xs" style="display: none;">&lt; &gt;</div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
 
 
 </body>
