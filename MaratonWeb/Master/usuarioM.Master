@@ -7,78 +7,79 @@
 <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no" />
-    <link href="../css/bootstrap.min.css" rel="stylesheet"/>
+    <link href="../css/bootstrap.min.css" rel="stylesheet" />
     <link href="../css/Maraton.css" rel="stylesheet" />
-   
+
     <script src="../js/jquery-1.9.1.min.js"></script>
     <script src="../js/bootstrap.min.js"></script>
     <title>Usuarios</title>
 </head>
 <body>
-     <div class="container">
+    <div class="container">
         <div class="jumbotron banner">
         </div>
 
 
-       <asp:ContentPlaceHolder ID="modal" runat="server">
-    </asp:ContentPlaceHolder>
+        <asp:ContentPlaceHolder ID="modal" runat="server">
+        </asp:ContentPlaceHolder>
 
         <nav class="navbar navbar-default">
-        <div class="container-fluid">
-          <div class="navbar-header">
-            <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
-              <span class="sr-only">Toggle navigation</span>
-              <span class="icon-bar"></span>
-              <span class="icon-bar"></span>
-              <span class="icon-bar"></span>
-            </button>
-           <a href="../Inicio.aspx" class="navbar-brand">Inicio</a>
-          </div>
-
-          <div id="navbar" class="navbar-collapse collapse">
-            <ul class="nav navbar-nav">
-              <li><a href="../Usuario/AdmiUsuario.aspx">Administrar usuarios</a></li>
-        
-              <li><a href="../Usuario/Historial.aspx">Historial de Maratones</a></li>
-        
-              <li><a href="../Usuario/registracion.aspx">Registracion a nuevo maraton</a></li>
-            </ul>
-            <ul class="nav navbar-nav navbar-right">
-              <li class="dropdown">
-                <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Usuario<span class="caret"></span></a>
-                <ul class="dropdown-menu">
-                  <li><a href="#">Action</a></li>
-                  <li role="separator" class="divider"></li>
-                  <li class="dropdown-header">Nav header</li>
-                  <li><a href="#">Separated link</a></li>
-                  <li><a href="#">Salir</a></li>
-                </ul>
-              </li>
-            </ul>
-          </div><!--/.nav-collapse -->
-        </div><!--/.container-fluid -->
-      </nav><!-- find nav-->
-        
-
-            <br class="clearfix" />
-
-            <div class="row">
-                <div class="container">
-                    <asp:ContentPlaceHolder ID="ContentPlaceHolder1" runat="server">
-                    </asp:ContentPlaceHolder>
+            <div class="container-fluid">
+                <div class="navbar-header">
+                    <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
+                        <span class="sr-only">Toggle navigation</span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                    </button>
                 </div>
-            </div> <!-- find row-->
-           <br class="clearfix" />
 
-          <div id="footer" class="row">
-            <div class="text-center row "  id="Div1" >
+                <div id="navbar" class="navbar-collapse collapse">
+                    <ul class="nav navbar-nav">
+                        <li><a href="../Usuario/AdmiUsuario.aspx">Administrar usuarios</a></li>
+
+                        <li><a href="../Usuario/Historial.aspx">Historial de Maratones</a></li>
+
+                        <li><a href="../Usuario/registracion.aspx">Registracion a nuevo maraton</a></li>
+                    </ul>
+                    <ul class="nav navbar-nav navbar-right">
+                        <li class="dropdown">
+                            <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Usuario<span class="caret"></span></a>
+                            <ul class="dropdown-menu">
+                                <li><a href="../Inicio.aspx">Salir</a></li>
+                            </ul>
+                        </li>
+                    </ul>
+                </div>
+                <!--/.nav-collapse -->
+            </div>
+            <!--/.container-fluid -->
+        </nav>
+        <!-- find nav-->
+
+
+        <br class="clearfix" />
+
+        <div class="row">
+            <div class="container">
+                <asp:ContentPlaceHolder ID="ContentPlaceHolder1" runat="server">
+                </asp:ContentPlaceHolder>
+            </div>
+        </div>
+        <!-- find row-->
+        <br class="clearfix" />
+
+        <div id="footer" class="row">
+            <div class="text-center row " id="Div1">
                 <uc1:ucFooter ID="ucFooterUsuario" runat="server" />
             </div>
-         </div> <!-- find row -->
-        
-  </div><!-- find container -->
-       
-    
-   
+        </div>
+        <!-- find row -->
+
+    </div>
+    <!-- find container -->
+
+
+
 </body>
 </html>
