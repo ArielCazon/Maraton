@@ -1,6 +1,8 @@
 ﻿<%@ Page Title="" Language="C#" MasterPageFile="~/Master/Administracion.Master" AutoEventWireup="true" CodeBehind="CrearMaraton.aspx.cs" Inherits="MaratonWeb.CrearMaraton" %>
 
+
 <asp:Content ID="Content2" ContentPlaceHolderID="ContentPlaceHolder1" runat="server">
+    <script src="../js/CrearMaraton.js" languaje="javascript" type="text/javascript"></script>
     <div class="center-block">
         <div class="col-xs-2"></div>
         <div class="col-xs-8">
@@ -22,7 +24,7 @@
                         </div>
                         <div class="form-group">
                             <asp:Label ID="lblMaximoParticipantes" runat="server" Text="Cantidad Maxima de Participantes" CssClass="control-label"></asp:Label>
-                            <asp:TextBox ID="txtMaximoParticipantes" runat="server" CssClass="form-control"></asp:TextBox>
+                            <asp:TextBox ID="txtMaximoParticipantes" runat="server" CssClass="form-control" TextMode="Number"></asp:TextBox>
                             <asp:RequiredFieldValidator
                                 ID="RequiredFieldValidatorCantMax"
                                 ControlToValidate="txtMaximoParticipantes"
@@ -38,7 +40,7 @@
                                 MinimumValue="100"
                                 MaximumValue="200"
                                 ControlToValidate="txtMaximoParticipantes"
-                                ErrorMessage="La cantidad maxima de participantes es de 200 personas"
+                                ErrorMessage="Debe ingresar un numero entre 100 y 200 participantes"
                                 ForeColor="Turquoise" Font-Bold="true" />
                         </div>
                         <div class="form-group">
@@ -52,6 +54,19 @@
                                 Text="Este campo es obligatorio!"
                                 runat="server"
                                 ForeColor="Turquoise" Font-Bold="true" />
+                        </div>
+                        <div class="form-group">
+                            <asp:Label ID="lblFecha" runat="server" Text="Fecha de Salida" CssClass="control-label"></asp:Label>
+                            <asp:TextBox ID="txtFechaSalida" runat="server" CssClass="form-control" TextMode="DateTimeLocal"></asp:TextBox>
+                            <asp:RequiredFieldValidator
+                                ID="RequiredFieldValidatorFecha"
+                                ControlToValidate="txtFechaSalida"
+                                Display="Static"
+                                ErrorMessage="*"
+                                Text="Este campo es obligatorio!"
+                                runat="server"
+                                ForeColor="Turquoise" Font-Bold="true" />
+                            
                         </div>
                         <div class="form-group">
                             <asp:Label ID="lblListaEspera" runat="server" Text="Personas en lista de espera" CssClass="control-label"></asp:Label>
@@ -140,7 +155,7 @@
                         </div>
                         <div class="form-group">
                             <div class="text-center">
-                                <asp:Button ID="btnCrearMaraton" runat="server" Text="Crear Maraton" class="btn btn-primary btn-lg btn-block" />
+                                <asp:Button ID="btnCrearMaraton" runat="server" Text="Crear Maraton" class="btn btn-primary btn-lg btn-block" OnClick="btnCrearMaraton_Click" />
                             </div>
                         </div>
                     </fieldset>
