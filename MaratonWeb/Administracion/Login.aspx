@@ -54,8 +54,9 @@
 
                             <div class="form-group">
                                 <div class="col-lg-10 col-lg-offset-2">
-                                    <asp:Button ID="btnIngresar" runat="server" Text="Ingresar" class="btn btn-primary btn-lg btn-block" />
+                                    <asp:Button ID="btnIngresar" runat="server" Text="Ingresar" OnClick="btnIngresar_Click" class="btn btn-primary btn-lg btn-block" />
                                 </div>
+                                <asp:Label ID="lblError" runat="server" Text="" ForeColor="Red" Font-Bold="true" CssClass="center-block"></asp:Label>
                             </div>
 
                         </fieldset>

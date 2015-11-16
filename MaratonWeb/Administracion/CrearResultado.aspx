@@ -14,18 +14,28 @@
 
                         <div class="form-group">
                             <asp:Label ID="lblMaraton" runat="server" Text="maraton">Maraton</asp:Label>
-                            <asp:DropDownList ID="txtMaraton" runat="server" class="form-control">
-                                <asp:ListItem Text="Seleccione maraton" Value="0"></asp:ListItem>
-                                <asp:ListItem Text="Maraton 1" Value="1"></asp:ListItem>
-                                <asp:ListItem Text="Maraton 2" Value="2"></asp:ListItem>
-                                <asp:ListItem Text="Maraton 3" Value="3"></asp:ListItem>
-                                <asp:ListItem Text="Maraton 4" Value="4"></asp:ListItem>
-                                <asp:ListItem Text="Maraton 5" Value="5"></asp:ListItem>
+                            <asp:DropDownList ID="ddlMaraton" runat="server" class="form-control" OnSelectedIndexChanged="txtMaraton_SelectedIndexChanged" >
                             </asp:DropDownList>
 
                             <asp:RequiredFieldValidator
                                 ID="RequiredFieldValidator1"
-                                ControlToValidate="txtMaraton"
+                                ControlToValidate="ddlMaraton"
+                                InitialValue="0"
+                                runat="server"
+                                ForeColor="Turquoise" Font-Bold="true"
+                                SetFocusOnError="true"
+                                ErrorMessage="*"
+                                Text="Este campo es obligatorio!">
+                            </asp:RequiredFieldValidator>
+
+                        </div>
+                        <div class="form-group">
+                            <asp:Label ID="lblUsuario" runat="server" Text="maraton">Maraton</asp:Label>
+                            <asp:DropDownList ID="ddlUsuario" runat="server" class="form-control">
+                            </asp:DropDownList>
+                            <asp:RequiredFieldValidator
+                                ID="RequiredFieldValidator3"
+                                ControlToValidate="ddlUsuario"
                                 InitialValue="0"
                                 runat="server"
                                 ForeColor="Turquoise" Font-Bold="true"
@@ -60,7 +70,7 @@
                         <div class="form-group">
                             <asp:Label ID="lblLlegada" runat="server" Text="llegada">Hora de Llegada</asp:Label>
 
-                            <asp:TextBox ID="txtLlegada" runat="server" class="form-control"></asp:TextBox>
+                            <asp:TextBox ID="txtLlegada" runat="server" class="form-control" TextMode="Time"></asp:TextBox>
                             <asp:RequiredFieldValidator
                                 ID="RequiredFieldLlegada"
                                 ControlToValidate="txtLlegada"
