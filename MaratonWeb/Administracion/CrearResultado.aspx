@@ -30,7 +30,7 @@
 
                         </div>
                         <div class="form-group">
-                            <asp:Label ID="lblUsuario" runat="server" Text="maraton">Maraton</asp:Label>
+                            <asp:Label ID="lblUsuario" runat="server" Text="maraton">Usuario</asp:Label>
                             <asp:DropDownList ID="ddlUsuario" runat="server" class="form-control">
                             </asp:DropDownList>
                             <asp:RequiredFieldValidator

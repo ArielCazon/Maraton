@@ -23,15 +23,18 @@ namespace MaratonWeb.Administracion
                 ddlMaraton.DataSource = maratonesFinalizadas.ToList();
                 ddlMaraton.DataValueField = "IdMaraton";
                 ddlMaraton.DataTextField = "Nombre";
-                ddlMaraton.Items.Add(new ListItem("Seleccione...", "0"));
                 ddlMaraton.DataBind();
+                ddlMaraton.Items.Insert(0,"Elija Maraton...");
+               
                 
             }
         }
 
         protected void txtMaraton_SelectedIndexChanged(object sender, EventArgs e)
         {
-
+            var maratonElegida = int.Parse(ddlMaraton.SelectedValue);
+            var usuariosMaraton = contexto.ResultadoMaratonParticipantes.Where(r => r.IdMaraton == maratonElegida && r.PosicionFinal == null)
+                                    .Select(r => r.Usuario);
         }
     }
 }
