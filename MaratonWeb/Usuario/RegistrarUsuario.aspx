@@ -50,7 +50,7 @@
                         </div>
                         <div class="form-group">
                             <asp:Label ID="lblContrasenia" runat="server" Text="Contraseña" CssClass="control-label"></asp:Label>
-                            <asp:TextBox ID="txtContrasenia" runat="server" CssClass="form-control"></asp:TextBox>
+                            <asp:TextBox ID="txtContrasenia" TextMode="Password" runat="server" CssClass="form-control"></asp:TextBox>
                             <asp:RequiredFieldValidator
                                 ID="RequiredFieldValidatorContrasenia"
                                 ControlToValidate="txtContrasenia"
@@ -89,7 +89,7 @@
 
                         <div class="form-group">
                             <asp:Label ID="lblFecha" runat="server" Text="Fecha nacimiento" CssClass="control-label"></asp:Label>
-                            <asp:TextBox ID="txtFecha" runat="server" CssClass="form-control"></asp:TextBox>
+                            <asp:TextBox ID="txtFecha" runat="server" CssClass="form-control" TextMode="Date"></asp:TextBox>
                             <asp:RequiredFieldValidator
                                 ID="RequiredFieldFecha"
                                 ControlToValidate="txtFecha"
@@ -112,6 +112,10 @@
                                 runat="server"
                                 ForeColor="Turquoise" Font-Bold="true" />
                         </div>
+                        
+                <div class="form-group">
+                    <asp:Label ID="lblOk" runat="server" Text="" Visible="false" CssClass="success text-success"></asp:Label>
+                </div>
 
 
                         <div class="form-group">
@@ -119,7 +123,7 @@
                                 <a href="../Inicio.aspx" class="btn btn-primary btn-lg btn-block">Volver </a>
                             </div>
                             <div class="col-xs-6">
-                                <asp:Button ID="btnRegistrarUsuario" runat="server" Text="Registrarse"  class="btn btn-primary btn-lg btn-block" />
+                                <asp:Button ID="btnRegistrarUsuario" runat="server" Text="Registrarse"  class="btn btn-primary btn-lg btn-block" OnClick="btnRegistrarUsuario_Click" />
 
                             </div>
                         </div>

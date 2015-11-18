@@ -83,9 +83,12 @@
     <Content Include="js\jquery.min.js" />
     <Content Include="js\npm.js" />
     <Content Include="js\respond.min.js" />
+    <Content Include="js\ScriptServicio.js" />
     <Content Include="Master\ucFooter.ascx" />
+    <Content Include="Servicios\servicio.asmx" />
     <Content Include="Usuario\AdmiUsuario.aspx" />
     <Content Include="Usuario\Historial.aspx" />
+    <Content Include="Usuario\LoginUsuario.aspx" />
     <Content Include="Usuario\registracion.aspx" />
     <Content Include="Usuario\RegistrarUsuario.aspx" />
     <Content Include="Web.config">
@@ -132,6 +135,7 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>MaratonDb.edmx</DependentUpon>
     </Compile>
+    <Compile Include="data\MaratonDTO.cs" />
     <Compile Include="data\ResultadoMaratonParticipante.cs">
       <DependentUpon>MaratonDb.tt</DependentUpon>
     </Compile>
@@ -167,6 +171,10 @@
       <DependentUpon>usuarioM.Master</DependentUpon>
     </Compile>
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Servicios\servicio.asmx.cs">
+      <DependentUpon>servicio.asmx</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
     <Compile Include="Usuario\AdmiUsuario.aspx.cs">
       <DependentUpon>AdmiUsuario.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
@@ -180,6 +188,13 @@
     </Compile>
     <Compile Include="Usuario\Historial.aspx.designer.cs">
       <DependentUpon>Historial.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Usuario\LoginUsuario.aspx.cs">
+      <DependentUpon>LoginUsuario.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Usuario\LoginUsuario.aspx.designer.cs">
+      <DependentUpon>LoginUsuario.aspx</DependentUpon>
     </Compile>
     <Compile Include="Usuario\registracion.aspx.cs">
       <DependentUpon>registracion.aspx</DependentUpon>

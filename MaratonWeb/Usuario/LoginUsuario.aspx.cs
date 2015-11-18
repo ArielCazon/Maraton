@@ -6,30 +6,30 @@ using System.Web.UI;
 using System.Web.UI.WebControls;
 using MaratonWeb.data;
 
-namespace MaratonWeb.Administracion
+namespace MaratonWeb.Usuario
 {
-    public partial class Login : System.Web.UI.Page
+    public partial class LoginUsuario : System.Web.UI.Page
     {
         protected void Page_Load(object sender, EventArgs e)
         {
 
         }
 
-        protected void btnIngresar_Click(object sender, EventArgs e)
+        protected void btnIngresarUsuario_Click(object sender, EventArgs e)
         {
             if (Page.IsValid)
             {
                 var contexto = new MaratonesEntities();
-                var usuario = contexto.Usuarios.FirstOrDefault(x => x.Email == txtEmail.Text);
 
+                var usuario = contexto.Usuarios.FirstOrDefault(x => x.Email == txtEmail.Text);
                 if (usuario == null)
                 {
                     lblError.Text = "El usuario no existe.";
                     return;
                 }
-                if (!usuario.Admin)
+                if (usuario.Admin)
                 {
-                    lblError.Text = "El Usuario ingresado no es Administrador.";
+                    lblError.Text = "El Usuario ingresado es Administrador.";
                     return;
                 }
                 if (txtPassword.Text != usuario.Contrasenia)
@@ -38,8 +38,7 @@ namespace MaratonWeb.Administracion
                 }
                 Session["UsuarioLogueado"] = usuario.IdUsuario;
                 Session["UsuarioAdmin"] = usuario.Admin;
-                Response.Redirect("CrearMaraton.aspx");
-                
+                Response.Redirect("Historial.aspx");
             }
         }
     }
