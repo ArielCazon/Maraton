@@ -39,38 +39,4 @@
            </div>
             </div>
 </asp:Content>
-<asp:Content ID="Content2" ContentPlaceHolderID="ContentPlaceHolder1" runat="server">
 
-    <div class="table-responsive">
-        <div class="panel panel-primary filterable">
-            <div class="panel-heading">
-                <h3 class="panel-title">Listado de maratones</h3>
-            </div>
-            <table class="table">
-                <thead>
-                    <tr class="active">
-                        <th>Maraton</th>
-                        <th>Estado</th>
-                        <th>Operacion</th>
-                    </tr>
-                </thead>
-                <tbody>
-                    <tr>
-                        <td>Unlam corre</td>
-                        <td>Activo</td>
-                        <td>    
-                        <button type="button" class="btn btn-primary btn-xs" data-toggle="modal" data-target="#myModal">
-                       Datos de maraton
-                       </button>
-
-                        </td>
-                     </tr>
-                  
-                </tbody>
-                </table>     
-    </div>
-                     
-    </div>
-
-
-</asp:Content>
